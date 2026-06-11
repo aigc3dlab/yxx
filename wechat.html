@@ -118,6 +118,26 @@
             object-fit: cover;
         }
 
+        .video-link {
+            position: relative;
+            display: block;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .video-link::after {
+            content: "点击观看视频";
+            position: absolute;
+            right: 12px;
+            bottom: 12px;
+            padding: 7px 12px;
+            border-radius: 999px;
+            background: rgba(15, 23, 42, .86);
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
         .quote {
             margin: 22px 0;
             padding: 18px 18px;
@@ -288,7 +308,9 @@
             <h2>这不是一次普通参观，而是一堂面向未来的AI实践课</h2>
             <p class="lead">青源宏智AI教育科技馆，是面向青少年的沉浸式人工智能研学实践基地。我们打破传统科技馆“重静态展示、轻深度交互”的局限，将全球硬核科技转化为孩子真正能参与、能表达、能创造的课程体验。</p>
             <div class="quote">让学生在真实场景中理解AI，在动手挑战中建立创新能力，在团队任务中完成一次从“看见科技”到“使用科技”的成长。</div>
-            <img class="cover-img" src="./Videos/科技馆宣传片-封面.jpg" alt="科技馆宣传片封面">
+            <a class="video-link" href="./Videos/科技馆宣传片.mp4">
+                <img class="cover-img" src="./Videos/科技馆宣传片-封面.jpg" alt="科技馆宣传片封面">
+            </a>
             <div class="grid">
                 <div class="card">
                     <strong>创新课堂</strong>
@@ -340,30 +362,53 @@
             <article class="project">
                 <h3>脑电波控制赛车</h3>
                 <p>戴上特制设备，用专注意念控制赛车启停，直观认识脑机接口与神经科学。</p>
-                <img src="./Videos/脑电波控制赛车-pdf封面.jpg" alt="脑电波控制赛车">
+                <a class="video-link" href="./Videos/脑电波控制赛车.mp4">
+                    <img src="./Videos/脑电波控制赛车-pdf封面.jpg" alt="脑电波控制赛车">
+                </a>
             </article>
 
             <article class="project">
                 <h3>MR大空间多人竞技</h3>
                 <p>多人竞技MR游戏融合潮玩IP与PVP机制，让学生在实景对战中理解空间感知与团队策略。</p>
-                <img src="./Videos/MR大空间多人竞技-pdf封面.jpg" alt="MR大空间多人竞技">
+                <a class="video-link" href="./Videos/MR大空间多人竞技.mp4">
+                    <img src="./Videos/MR大空间多人竞技-pdf封面.jpg" alt="MR大空间多人竞技">
+                </a>
             </article>
 
             <article class="project">
                 <h3>AR悦动格子与RC越野竞速</h3>
                 <p>在体感互动与AI辅助赛车挑战中，训练反应速度、身体协调、路径判断与策略规划。</p>
                 <div class="grid">
-                    <img class="cover-img" src="./Videos/AR悦动格子-pdf封面.jpg" alt="AR悦动格子">
-                    <img class="cover-img" src="./Videos/RC越野竞速-pdf封面.jpg" alt="RC越野竞速">
+                    <a class="video-link" href="./Videos/AR悦动格子.mp4">
+                        <img class="cover-img" src="./Videos/AR悦动格子-pdf封面.jpg" alt="AR悦动格子">
+                    </a>
+                    <a class="video-link" href="./Videos/RC越野竞速.mp4">
+                        <img class="cover-img" src="./Videos/RC越野竞速-pdf封面.jpg" alt="RC越野竞速">
+                    </a>
                 </div>
+            </article>
+
+            <article class="project">
+                <h3>3D打印工坊</h3>
+                <p>利用3D打印机亲手制作专属模型，激光雕刻赋予作品独特魅力，一站式启蒙孩子的科技创造力。</p>
+                <a class="video-link" href="./Videos/幼儿亲子活动区.mp4">
+                    <img src="./Videos/幼儿亲子活动区-pdf封面.jpg" alt="幼儿亲子活动区">
+                </a>
             </article>
 
             <article class="project">
                 <h3>智慧投篮机器人、球形无人机秀、水弹车打靶对抗</h3>
                 <p>通过图像识别、路径规划、传感器与AI瞄准系统，让学生把“人工智能”从概念变成可观察的现场能力。</p>
                 <div class="grid">
-                    <img class="cover-img" src="./Videos/智慧投篮机器人-pdf封面.jpg" alt="智慧投篮机器人">
-                    <img class="cover-img" src="./Videos/球形无人机秀-pdf封面.jpg" alt="球形无人机秀">
+                    <a class="video-link" href="./Videos/智慧投篮机器人.mp4">
+                        <img class="cover-img" src="./Videos/智慧投篮机器人-pdf封面.jpg" alt="智慧投篮机器人">
+                    </a>
+                    <a class="video-link" href="./Videos/球形无人机秀.mp4">
+                        <img class="cover-img" src="./Videos/球形无人机秀-pdf封面.jpg" alt="球形无人机秀">
+                    </a>
+                    <a class="video-link" href="./Videos/水弹车打靶对抗.mp4">
+                        <img class="cover-img" src="./Videos/水弹车打靶对抗-pdf封面.jpg" alt="水弹车打靶对抗">
+                    </a>
                 </div>
             </article>
         </section>
