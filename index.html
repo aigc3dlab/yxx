@@ -397,6 +397,41 @@
             opacity: 0.8;
         }
 
+        .location-info {
+            margin-top: 34px;
+            max-width: 760px;
+            text-align: center;
+        }
+
+        .location-info p {
+            color: #e0f2fe;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .location-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .location-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 42px;
+            padding: 0 18px;
+            border: 1px solid rgba(255, 255, 255, 0.55);
+            border-radius: 999px;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+            background: rgba(15, 23, 42, 0.32);
+        }
+
         .partner-card {
             background: white;
             padding: 20px;
@@ -473,6 +508,15 @@
             .cover-page .sub-title {
                 font-size: 16px;
                 letter-spacing: 4px;
+            }
+
+            .location-info p {
+                font-size: 15px;
+            }
+
+            .location-links {
+                flex-direction: column;
+                align-items: stretch;
             }
         }
 
@@ -1088,6 +1132,15 @@
             <h1>期待与您合作</h1>
             <p>共同打造AI时代的创新教育新范式</p>
             <div class="sub-title">青源宏智·AI教育科技馆 | 研学合作对接</div>
+            <div class="location-info">
+                <p><strong>位置导航</strong></p>
+                <p>临时馆：南昌慧谷创意产业园</p>
+                <p>正式馆：南昌世茂水城青源汇</p>
+                <div class="location-links">
+                    <a href="https://uri.amap.com/search?keyword=%E5%8D%97%E6%98%8C%E6%85%A7%E8%B0%B7%E5%88%9B%E6%84%8F%E4%BA%A7%E4%B8%9A%E5%9B%AD" target="_blank" rel="noopener">导航至临时馆</a>
+                    <a href="https://uri.amap.com/search?keyword=%E5%8D%97%E6%98%8C%E4%B8%96%E8%8C%82%E6%B0%B4%E5%9F%8E%E9%9D%92%E6%BA%90%E6%B1%87" target="_blank" rel="noopener">导航至正式馆</a>
+                </div>
+            </div>
         </div>
     </div>
 
