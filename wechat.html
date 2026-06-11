@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>青源宏智AI教育科技馆研学合作方案｜微信公众号版</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #f3f6f8;
+            color: #1f2937;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
+            line-height: 1.78;
+        }
+
+        .article {
+            width: min(100%, 760px);
+            margin: 0 auto;
+            background: #ffffff;
+        }
+
+        .hero {
+            position: relative;
+            min-height: 520px;
+            padding: 42px 24px 36px;
+            color: #ffffff;
+            background: linear-gradient(rgba(0, 0, 0, .48), rgba(0, 0, 0, .56)), url("./背景图片.png") center / cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        .logo {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            width: 132px;
+            height: auto;
+            filter: drop-shadow(0 4px 12px rgba(0, 0, 0, .35));
+        }
+
+        .eyebrow {
+            color: #67e8f9;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: .08em;
+            margin: 0 0 12px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 38px;
+            line-height: 1.18;
+            letter-spacing: 0;
+        }
+
+        .hero p {
+            margin: 18px 0 0;
+            color: #eef6ff;
+            font-size: 18px;
+            max-width: 560px;
+        }
+
+        section {
+            padding: 34px 24px;
+            border-bottom: 10px solid #f3f6f8;
+        }
+
+        h2 {
+            margin: 0 0 18px;
+            padding-left: 14px;
+            border-left: 5px solid #0891b2;
+            color: #0f172a;
+            font-size: 24px;
+            line-height: 1.35;
+            letter-spacing: 0;
+        }
+
+        h3 {
+            margin: 24px 0 10px;
+            color: #0f766e;
+            font-size: 19px;
+            line-height: 1.45;
+        }
+
+        p {
+            margin: 0 0 14px;
+            font-size: 16px;
+        }
+
+        .lead {
+            color: #334155;
+            font-size: 17px;
+            font-weight: 500;
+        }
+
+        .note {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        .cover-img,
+        .wide-img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .cover-img {
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+        }
+
+        .quote {
+            margin: 22px 0;
+            padding: 18px 18px;
+            background: #ecfeff;
+            border-left: 4px solid #06b6d4;
+            color: #155e75;
+            font-weight: 600;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-top: 18px;
+        }
+
+        .card {
+            padding: 16px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            background: #ffffff;
+        }
+
+        .card strong {
+            display: block;
+            margin-bottom: 8px;
+            color: #0f172a;
+            font-size: 16px;
+        }
+
+        .card p {
+            color: #475569;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .project {
+            margin: 18px 0;
+            padding: 18px;
+            border-radius: 8px;
+            background: #f8fafc;
+            border: 1px solid #e5edf3;
+        }
+
+        .project img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-top: 12px;
+        }
+
+        .program {
+            margin-top: 18px;
+            padding: 18px;
+            border-radius: 8px;
+            background: #f8fafc;
+            border-top: 4px solid #0891b2;
+        }
+
+        .program.full {
+            border-top-color: #f59e0b;
+        }
+
+        .tag-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 12px 0;
+        }
+
+        .tag {
+            display: inline-flex;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: #e0f2fe;
+            color: #0369a1;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        ul {
+            margin: 10px 0 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: #475569;
+        }
+
+        .timeline {
+            margin-top: 18px;
+            border-left: 2px solid #cbd5e1;
+            padding-left: 18px;
+        }
+
+        .time-item {
+            position: relative;
+            margin-bottom: 18px;
+        }
+
+        .time-item::before {
+            content: "";
+            position: absolute;
+            left: -25px;
+            top: 8px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #0891b2;
+        }
+
+        .time {
+            color: #0891b2;
+            font-weight: 800;
+        }
+
+        .cta {
+            background: #0f172a;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .cta h2 {
+            display: inline-block;
+            padding: 0 0 10px;
+            border-left: 0;
+            border-bottom: 3px solid #22d3ee;
+            color: #ffffff;
+        }
+
+        .cta p {
+            color: #dbeafe;
+        }
+
+        @media (max-width: 640px) {
+            .hero {
+                min-height: 470px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            section {
+                padding: 30px 18px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="article">
+        <header class="hero">
+            <img class="logo" src="./logo/qyhzlogoA.png" alt="青源宏智">
+            <p class="eyebrow">中小学研学合作方案</p>
+            <h1>青源宏智<br>AI教育科技馆</h1>
+            <p>育见未来，与AI同行。把前沿科技变成孩子可感知、可理解、可动手创造的研学现场。</p>
+        </header>
+
+        <section>
+            <h2>这不是一次普通参观，而是一堂面向未来的AI实践课</h2>
+            <p class="lead">青源宏智AI教育科技馆，是面向青少年的沉浸式人工智能研学实践基地。我们打破传统科技馆“重静态展示、轻深度交互”的局限，将全球硬核科技转化为孩子真正能参与、能表达、能创造的课程体验。</p>
+            <div class="quote">让学生在真实场景中理解AI，在动手挑战中建立创新能力，在团队任务中完成一次从“看见科技”到“使用科技”的成长。</div>
+            <img class="cover-img" src="./Videos/科技馆宣传片-封面.jpg" alt="科技馆宣传片封面">
+            <div class="grid">
+                <div class="card">
+                    <strong>创新课堂</strong>
+                    <p>不仅展示前沿科技，更激发探索欲、提问力与创造力。</p>
+                </div>
+                <div class="card">
+                    <strong>降维落地</strong>
+                    <p>把“黑科技”转化为青少年可理解、可动手参与的项目。</p>
+                </div>
+                <div class="card">
+                    <strong>双馆布局</strong>
+                    <p>临时馆位于慧谷创意产业园，正式馆布局世茂水城青源汇。</p>
+                </div>
+                <div class="card">
+                    <strong>综合赋能</strong>
+                    <p>课程开发、师资认证、赛事承办、高校联动同步推进。</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>为什么学校和家长都需要科技研学</h2>
+            <p>AI教育、研学实践与教育数字化正在成为素质教育的重要方向。面向未来，学生不只需要记住答案，更需要拥有创造答案的能力。</p>
+            <div class="grid">
+                <div class="card">
+                    <strong>政策趋势</strong>
+                    <p>人工智能教育进入中小学育人体系，研学实践更强调课程化与教育性。</p>
+                </div>
+                <div class="card">
+                    <strong>学校需求</strong>
+                    <p>补齐AI教育、创新实践、综合素质评价与校企合作资源短板。</p>
+                </div>
+                <div class="card">
+                    <strong>家长需求</strong>
+                    <p>从打卡观光转向深度教育，更关注孩子的创新能力与未来竞争力。</p>
+                </div>
+                <div class="card">
+                    <strong>学生成长</strong>
+                    <p>培养内驱力、提问能力、共情能力与AI共存力。</p>
+                </div>
+            </div>
+            <img class="wide-img" src="./未来学院/中小学AI普及教育全景.png" alt="中小学人工智能普及教育全景">
+        </section>
+
+        <section>
+            <h2>八大特色体验项目，打开孩子的科技想象力</h2>
+            <p>从脑机接口、MR空间竞技，到智能机器人、无人机与AI投篮，孩子不是站在围栏外观看，而是进入任务现场，亲自观察、操作、协作和复盘。</p>
+
+            <article class="project">
+                <h3>脑电波控制赛车</h3>
+                <p>戴上特制设备，用专注意念控制赛车启停，直观认识脑机接口与神经科学。</p>
+                <img src="./Videos/脑电波控制赛车-pdf封面.jpg" alt="脑电波控制赛车">
+            </article>
+
+            <article class="project">
+                <h3>MR大空间多人竞技</h3>
+                <p>多人竞技MR游戏融合潮玩IP与PVP机制，让学生在实景对战中理解空间感知与团队策略。</p>
+                <img src="./Videos/MR大空间多人竞技-pdf封面.jpg" alt="MR大空间多人竞技">
+            </article>
+
+            <article class="project">
+                <h3>AR悦动格子与RC越野竞速</h3>
+                <p>在体感互动与AI辅助赛车挑战中，训练反应速度、身体协调、路径判断与策略规划。</p>
+                <div class="grid">
+                    <img class="cover-img" src="./Videos/AR悦动格子-pdf封面.jpg" alt="AR悦动格子">
+                    <img class="cover-img" src="./Videos/RC越野竞速-pdf封面.jpg" alt="RC越野竞速">
+                </div>
+            </article>
+
+            <article class="project">
+                <h3>智慧投篮机器人、球形无人机秀、水弹车打靶对抗</h3>
+                <p>通过图像识别、路径规划、传感器与AI瞄准系统，让学生把“人工智能”从概念变成可观察的现场能力。</p>
+                <div class="grid">
+                    <img class="cover-img" src="./Videos/智慧投篮机器人-pdf封面.jpg" alt="智慧投篮机器人">
+                    <img class="cover-img" src="./Videos/球形无人机秀-pdf封面.jpg" alt="球形无人机秀">
+                </div>
+            </article>
+        </section>
+
+        <section>
+            <h2>从看别人做到自己做：机器人制作工坊</h2>
+            <p>1.5小时专属深度体验，将馆内所见所感转化为实际操作能力。不同年龄段有不同任务难度，让孩子在可完成的挑战中获得成就感。</p>
+            <img class="cover-img" src="./robot_workshop.png" alt="机器人制作工坊">
+            <div class="grid">
+                <div class="card">
+                    <strong>幼儿组：启蒙</strong>
+                    <p>简单有趣的拼搭操作，培养科技兴趣与空间结构感知。</p>
+                </div>
+                <div class="card">
+                    <strong>小学低龄组：基础</strong>
+                    <p>通过拼搭对抗实战，锻炼空间感与规则意识。</p>
+                </div>
+                <div class="card">
+                    <strong>小学高龄组：进阶</strong>
+                    <p>进阶改装与挑战，理解机械原理与AI逻辑。</p>
+                </div>
+                <div class="card">
+                    <strong>六步流程</strong>
+                    <p>趣味导入、破冰互动、初识机器、明确规则、实战比拼、复盘总结。</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>课程体系支撑：玩、学、赛、研一体化培养闭环</h2>
+            <p>青源宏智不是把展项简单串联，而是通过课程体系、项目实践、赛事通道和高校资源，让学生在一次研学中看到更长远的成长路径。</p>
+            <img class="wide-img" src="./鲸鱼AI/鲸鱼AI课程体系.jpg" alt="青源宏智AI课程体系">
+            <div class="grid">
+                <div class="card">
+                    <strong>玩：兴趣启蒙</strong>
+                    <p>通过沉浸式体验激发好奇心，让孩子愿意主动探索。</p>
+                </div>
+                <div class="card">
+                    <strong>学：系统课程</strong>
+                    <p>以AI通识、编程实践和项目任务构建基础认知。</p>
+                </div>
+                <div class="card">
+                    <strong>赛：真实挑战</strong>
+                    <p>通过竞赛和任务制训练协作、表达与抗压能力。</p>
+                </div>
+                <div class="card">
+                    <strong>研：产学研联动</strong>
+                    <p>联动高校与前沿资源，延伸学生的全球视野。</p>
+                </div>
+            </div>
+            <img class="wide-img" src="./未来学院/课程大纲.png" alt="课程大纲">
+        </section>
+
+        <section>
+            <h2>两套可落地研学方案</h2>
+            <p>基于学校与机构常见组织需求，我们设计半日与全日两种标准化动线，便于不同年级、不同人数、不同活动目标快速执行。</p>
+            <article class="program">
+                <h3>半日研学</h3>
+                <div class="tag-row">
+                    <span class="tag">9:00-14:00</span>
+                    <span class="tag">高密度体验</span>
+                    <span class="tag">分AB动线</span>
+                </div>
+                <ul>
+                    <li>科学创意展演：把抽象科学原理转化为直观体验。</li>
+                    <li>创意编程课：从图形化启蒙到项目实战，训练计算思维。</li>
+                    <li>宇树机器人导览：浏览群舞机器人、无人工厂等展项。</li>
+                    <li>全馆竞技PK：光影跃动、MR空间对战、AI下棋、投篮机器人等项目闯关。</li>
+                    <li>机甲悟空合影与研学证书授证，形成可带走的荣誉记忆。</li>
+                </ul>
+            </article>
+
+            <article class="program full">
+                <h3>全日研学</h3>
+                <div class="tag-row">
+                    <span class="tag">9:00-16:10</span>
+                    <span class="tag">课程+赛事</span>
+                    <span class="tag">深度闭环</span>
+                </div>
+                <ul>
+                    <li>上午双核心：创意编程课与科学创意展演。</li>
+                    <li>定制化营养午餐与2D大电影，兼顾休整与科普观影。</li>
+                    <li>宇树机器人专属导览，体验高记忆点互动展示。</li>
+                    <li>多赛道挑战：脑控赛事、AI下棋、投篮机器人、RC越野车。</li>
+                    <li>结营合影与专属荣誉授证，完整记录学生高光时刻。</li>
+                </ul>
+            </article>
+        </section>
+
+        <section>
+            <h2>研学行程示例</h2>
+            <div class="timeline">
+                <div class="time-item">
+                    <div class="time">9:00 集合签到</div>
+                    <p>科技馆大厅集合，完成分组、签到与动线确认。</p>
+                </div>
+                <div class="time-item">
+                    <div class="time">9:00-11:30 上午课程</div>
+                    <p>科学创意展演与创意编程课同步推进，训练探索求知、逻辑思维与独立调试能力。</p>
+                </div>
+                <div class="time-item">
+                    <div class="time">11:30-12:30 午间休整</div>
+                    <p>午餐与2D科普电影完成能量补给和知识延展。</p>
+                </div>
+                <div class="time-item">
+                    <div class="time">12:30-16:10 下午挑战</div>
+                    <p>机器人导览、脑控赛事、MR空间对战、投篮机器人、RC越野等项目分组体验。</p>
+                </div>
+                <div class="time-item">
+                    <div class="time">结营授证</div>
+                    <p>合影留念，颁发研学证书，形成完整的活动闭环。</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>学校放心，家长安心：安全与服务保障</h2>
+            <div class="grid">
+                <div class="card">
+                    <strong>5分钟响应机制</strong>
+                    <p>流血、扭伤、晕厥、异物卡喉等突发情况均有明确急救流程。</p>
+                </div>
+                <div class="card">
+                    <strong>全程导览监督</strong>
+                    <p>导览人员全程不离队，重点设备与跑动环节提前安全提醒。</p>
+                </div>
+                <div class="card">
+                    <strong>统一服务标准</strong>
+                    <p>人员统一制服与工牌，接待、讲解、互动保持规范礼仪。</p>
+                </div>
+                <div class="card">
+                    <strong>启发式讲解</strong>
+                    <p>尊重孩子的奇思妙想，鼓励提问、表达和复盘。</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>一次研学，带走四种核心收获</h2>
+            <div class="grid">
+                <div class="card">
+                    <strong>创新突破与全球视野</strong>
+                    <p>对接国际平台与赛事通道，理解科技竞争与未来趋势。</p>
+                </div>
+                <div class="card">
+                    <strong>职业探索与工程思维</strong>
+                    <p>感受智能制造与AI研发场景，建立工程化问题解决意识。</p>
+                </div>
+                <div class="card">
+                    <strong>实践应用与技能培养</strong>
+                    <p>从操作到创造，掌握编程、操控、协作与表达能力。</p>
+                </div>
+                <div class="card">
+                    <strong>科技兴趣与AI启蒙</strong>
+                    <p>通过前沿互动点燃好奇心，建立人工智能基础认知。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <h2>期待与您合作</h2>
+            <p>共同打造AI时代的创新教育新范式。</p>
+            <p>青源宏智AI教育科技馆｜中小学研学合作方案</p>
+        </section>
+    </main>
+</body>
+
+</html>
