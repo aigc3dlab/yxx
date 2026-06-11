@@ -450,6 +450,21 @@
             margin: 0;
         }
 
+        .media-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+            margin-top: 22px;
+        }
+
+        .media-gallery img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+        }
+
         @media (max-width: 768px) {
             .page-container {
                 flex-direction: column;
@@ -467,6 +482,14 @@
 
             .grid-container {
                 grid-template-columns: 1fr;
+            }
+
+            .media-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .media-gallery img {
+                height: auto;
             }
 
             .program-grid,
@@ -654,6 +677,65 @@
                             <h4>🎯 痛点解决</h4>
                             <p>针对性解决孩子注意力不集中、学了用不上、遇挫折就放弃的常见学习痛点，进可做科技特长升学加分，退可强化数理化底层逻辑。</p>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 探索挑战手册 -->
+        <div class="section fp-auto-height">
+            <div class="page-container">
+                <div class="text-content" style="width: 100%;">
+                    <h2>AI探索挑战手册 · 隐藏任务与集章奖励</h2>
+                    <p>为了让研学不止停留在“看展”，青源宏智AI教育科技馆引入“隐藏任务 + 集章奖励”的挑战机制，将展项体验、课程目标和成果认证串联起来。</p>
+                    <div class="grid-container">
+                        <div class="grid-item">
+                            <h4>30分钟限时挑战</h4>
+                            <p>围绕展馆任务线索完成观察、操作、问答与打卡，强化参与感和目标感。</p>
+                        </div>
+                        <div class="grid-item">
+                            <h4>挑战式学习</h4>
+                            <p>突出“做中学”，让孩子在失败、重试和复盘中培养问题解决能力与抗挫折能力。</p>
+                        </div>
+                        <div class="grid-item">
+                            <h4>分级奖励体系</h4>
+                            <p>结合任务完成度设置集章、礼品和荣誉认证，形成可带走的成长记忆。</p>
+                        </div>
+                        <div class="grid-item">
+                            <h4>AI认知闭环</h4>
+                            <p>将脑机接口、智能机器人、虚拟现实、增强现实、智能穿戴等技术体验转化为可理解的学习成果。</p>
+                        </div>
+                    </div>
+                    <img src="./图片/AI探索挑战手册.png" alt="AI探索挑战手册" class="zoomable-img"
+                        style="width: 100%; margin-top: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.14);"
+                        onclick="if(this.requestFullscreen) this.requestFullscreen(); else if(this.webkitRequestFullscreen) this.webkitRequestFullscreen();">
+                </div>
+            </div>
+        </div>
+
+        <!-- 科学实验秀 -->
+        <div class="section fp-auto-height">
+            <div class="page-container">
+                <div class="text-content" style="width: 100%;">
+                    <h2>科学实验秀 · 把科学原理演出来</h2>
+                    <p>科学实验秀打破传统科普“看、听”的单一模式，以趣味实验、舞台演绎、互动问答和亲子协作为核心，把抽象科学原理转化为直观、炫酷、有参与感的现场表演。</p>
+                    <div class="grid-container">
+                        <div class="grid-item">
+                            <h4>探索求知能力</h4>
+                            <p>通过现象观察和现场提问，让孩子主动猜想、验证和表达。</p>
+                        </div>
+                        <div class="grid-item">
+                            <h4>逻辑思维与科学思考</h4>
+                            <p>从“为什么会这样”出发，引导学生理解现象背后的科学原理。</p>
+                        </div>
+                    </div>
+                    <div class="media-gallery">
+                        <img src="./图片/科学秀1.jpg" alt="科学实验秀现场1" class="zoomable-img"
+                            onclick="if(this.requestFullscreen) this.requestFullscreen(); else if(this.webkitRequestFullscreen) this.webkitRequestFullscreen();">
+                        <img src="./图片/科学秀2.jpg" alt="科学实验秀现场2" class="zoomable-img"
+                            onclick="if(this.requestFullscreen) this.requestFullscreen(); else if(this.webkitRequestFullscreen) this.webkitRequestFullscreen();">
+                        <img src="./图片/科学秀3.jpg" alt="科学实验秀现场3" class="zoomable-img"
+                            onclick="if(this.requestFullscreen) this.requestFullscreen(); else if(this.webkitRequestFullscreen) this.webkitRequestFullscreen();">
                     </div>
                 </div>
             </div>
@@ -1149,7 +1231,7 @@
                 scrollBar: true,
                 navigation: true,
                 navigationPosition: 'right',
-                navigationTooltips: ['封面', '场馆介绍', '政策背景', '普及全景', '市场需求', '特色展项', '动手实践', '全学段课程', '课程体系', '研学服务', '行程安排', '安全保障', '研学收获', '联系我们'],
+                navigationTooltips: ['封面', '场馆介绍', '政策背景', '普及全景', '市场需求', '探索手册', '科学实验秀', '特色展项', '动手实践', '全学段课程', '课程体系', '研学服务', '行程安排', '安全保障', '研学收获', '联系我们'],
                 showActiveTooltip: true,
                 responsiveWidth: 768
             });
