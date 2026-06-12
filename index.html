@@ -5,9 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>青源宏智·AI教育科技馆 研学合作方案</title>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/fullpage.js@3.1.2/dist/fullpage.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullpage.js@3.1.2/dist/fullpage.min.css">
     <style>
         * {
             margin: 0;
@@ -16,12 +13,19 @@
             font-family: "Microsoft YaHei", sans-serif;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #f8fafc;
+        }
+
         .section {
             background-color: #f8fafc;
             padding: 40px;
-            overflow: auto;
+            overflow: visible;
             position: relative;
-            /* Changed from hidden to auto to support long content */
         }
 
         .section::after {
@@ -46,12 +50,6 @@
             gap: 60px;
             padding: 60px 20px;
             /* Added padding for mobile/long content */
-        }
-
-        /* Fix for auto-height sections in fullpage.js */
-        .fp-auto-height .page-container {
-            height: auto !important;
-            min-height: 100vh;
         }
 
         .text-content {
@@ -333,6 +331,7 @@
         .cover-page {
             background: url('./背景图片.png') center/cover no-repeat;
             position: relative;
+            min-height: 100vh;
             color: white;
             text-align: center;
             display: flex;
@@ -577,7 +576,7 @@
 </head>
 
 <body>
-    <div id="fullpage">
+    <main class="long-page">
         <!-- 封面页 -->
         <div class="section cover-page">
             <h1>青源宏智·AI教育科技馆</h1>
@@ -625,7 +624,7 @@
         </div>
 
         <!-- 政策背景 -->
-        <div class="section fp-auto-height">
+        <div class="section">
             <div class="page-container">
                 <div class="text-content" style="width: 100%;">
                     <h2>政策背景 · 时代趋势</h2>
@@ -696,7 +695,7 @@
         </div>
 
         <!-- 探索挑战手册 -->
-        <div class="section fp-auto-height">
+        <div class="section">
             <div class="page-container">
                 <div class="text-content" style="width: 100%;">
                     <h2>AI探索挑战手册 · 隐藏任务与集章奖励</h2>
@@ -727,7 +726,7 @@
         </div>
 
         <!-- 科学实验秀 -->
-        <div class="section fp-auto-height">
+        <div class="section">
             <div class="page-container">
                 <div class="text-content" style="width: 100%;">
                     <h2>科学实验秀 · 把科学原理演出来</h2>
@@ -918,7 +917,7 @@
         </div>
 
         <!-- 课程大纲 -->
-        <div class="section fp-auto-height">
+        <div class="section">
             <div class="page-container">
                 <div class="text-content" style="width:100%;">
                     <h2>体系支撑 · 青源宏智AI全学段课程</h2>
@@ -964,7 +963,7 @@
         </div>
 
         <!-- 课程体系 -->
-        <div class="section fp-auto-height">
+        <div class="section">
             <div class="page-container">
                 <div class="text-content">
                     <h2>课程体系 · 玩·学·赛·研 一体化培养闭环</h2>
@@ -1045,7 +1044,7 @@
         </div>
 
         <!-- 行程安排 -->
-        <div class="section fp-auto-height">
+        <div class="section">
             <div class="page-container">
                 <div class="text-content" style="width:100%;">
                     <h2>研学行程 · 双方案详细动线</h2>
@@ -1238,20 +1237,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </main>
 
     <script>
-        $(document).ready(function () {
-            $('#fullpage').fullpage({
-                autoScrolling: true,
-                scrollBar: true,
-                navigation: true,
-                navigationPosition: 'right',
-                navigationTooltips: ['封面', '场馆介绍', '政策背景', '普及全景', '市场需求', '探索手册', '科学实验秀', '特色展项', '动手实践', '全学段课程', '课程体系', '研学服务', '行程安排', '安全保障', '研学收获', '联系我们'],
-                showActiveTooltip: true,
-                responsiveWidth: 768
-            });
-        });
         // 监听全屏状态变化，处理PBL视频的静音/取消静音
         document.addEventListener('fullscreenchange', function () {
             const pblVideos = document.querySelectorAll('.pbl-video');
@@ -1303,9 +1291,10 @@
         }
 
         // 页面准备就绪和完全加载时分别尝试启动
-        $(document).ready(forceAutoplay);
+        document.addEventListener('DOMContentLoaded', forceAutoplay);
         window.addEventListener('load', forceAutoplay);
     </script>
 </body>
 
 </html>
+
