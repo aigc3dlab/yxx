@@ -354,15 +354,18 @@
 
         .cover-page::after {
             content: "";
+            position: absolute;
             top: 28px;
             left: auto;
             right: 42px;
             width: 150px;
             height: 46px;
-            background-image: url('./logo/qyhzlogoA.png');
+            background: url('./logo/qyhzlogoA.png') center/contain no-repeat;
             transform: none;
             filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.28));
             opacity: 1;
+            pointer-events: none;
+            z-index: 2;
         }
 
         .cover-page>* {
